@@ -1,6 +1,6 @@
 # Flask on Docker (Flask + Postgres + Gunicorn + Nginx)
 ![CI](https://github.com/csoe-hub/flask-on-docker/actions/workflows/ci.yml/badge.svg)
-A containerized Flask web service backed by PostgreSQL, served in production through Gunicorn behind Nginx. The app supports uploading images via a simple web UI and serves uploaded files from a shared media volume, demonstrating a small “Instagram-style” service architecture with multiple cooperating containers.
+This repository contains a simple web application built with Flask that runs inside Docker containers. The app allows users to upload an image through a webpage and then view the uploaded image. The project uses PostgreSQL for the database, Gunicorn to run the Flask app in production, and Nginx as a reverse proxy to handle requests and serve static files. Docker Compose is used to manage all of the services together, showing how multiple containers can work together to run a web application.
 
 ## Demo
 

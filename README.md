@@ -16,43 +16,58 @@ This repository contains a simple web application built with Flask that runs ins
 
 ## Build Instructions and Run 
 
-From the repo root:
-
-1. Start the development environment
+### 1. Start the development environment
 
 From the root of the repository, run:
 
+```
 docker compose up -d --build
+```
 
 This command builds the Docker images and starts the containers.
 
-2. Start the production environment
+### 2. Start the production environment
 
 To run the production configuration with Gunicorn and Nginx:
 
+```
 docker compose -f docker-compose.prod.yml up -d --build
+```
 
 Create the database:
 
+```
 docker compose -f docker-compose.prod.yml exec web python manage.py create_db
-3. Access the application
+```
+
+### 3. Access the application
 
 Once the containers are running, the web application can be accessed through the browser.
 
 Example:
 
+```
 http://localhost:<port>
-4. Upload and view images
+```
+
+### 4. Upload and view images
 
 You can upload an image at:
 
+```
 /upload
+```
 
 After uploading, the image can be viewed at:
 
+```
 /media/<filename>
-5. Stop the containers
+```
+
+### 5. Stop the containers
 
 To stop the services:
 
+```
 docker compose down
+```
